@@ -29,7 +29,7 @@ Mở VS Code, chọn **Kernel Python (`venv`)** cho các Notebook và chạy l�
 | :---: | :--- | :--- | :--- |
 | **1** | **`notebooks/crawl.ipynb`** | Cào dữ liệu theo tỉ lệ thực tế (60% Tích cực, 20% Trung tính, 20% Tiêu cực). Hỗ trợ dừng bất kỳ lúc nào vẫn lưu dữ liệu. | `data/raw/reviews_....csv` |
 | **2** | **`notebooks/process.ipynb`** | Làm sạch nhẹ (Unicode NFC, che SĐT/link/email, xóa review rỗng, khử trùng lặp). | `data/processed/reviews_clean.csv` |
-| **3** | **`notebooks/label.ipynb`** | Báo cáo thử nghiệm nghiệm thu Prompt gán nhãn với Claude & chia 3 tập Train (70%), Val (15%), Test (15%). | `data/splits/train.csv`<br>`data/splits/validation.csv`<br>`data/splits/test.csv` |
+| **3** | **`notebooks/label.ipynb`** | Đọc nhãn người (500 câu) và nhãn AI (toàn bộ, gán theo `prompt_ai_label1.md`), đo độ khớp & Cohen's Kappa, chia tập: Test = 500 câu nhãn người, Validation = 15%, Train = phần còn lại. | `data/splits/train.csv`<br>`data/splits/validation.csv`<br>`data/splits/test.csv` |
 | **4** | **`notebooks/tien_xu_ly.ipynb`** | Phân tích độ lệch từ dừng cảm xúc trên tập Train & thực nghiệm so sánh 3 mức từ dừng trên Validation. | `data/tien_xu_ly/train.csv`<br>`data/tien_xu_ly/validation.csv`<br>`data/tien_xu_ly/test.csv` |
 | **5** | **`notebooks/feature.ipynb`** | *(Phần dành cho bạn phụ trách Feature)*: Trích xuất đặc trưng số (TF-IDF, BoW) chỉ fit trên Train. | `models/tfidf_vectorizer.pkl` |
 | **6** | **`notebooks/ml.ipynb`** | *(Phần dành cho bạn phụ trách ML)*: Huấn luyện Naive Bayes, SVM, Logistic Regression và đánh giá trên Test. | Báo cáo Classification Report & Confusion Matrix |
@@ -46,6 +46,7 @@ code_tay/
 │   ├── resources/           # Bảng teencode.csv, tu_dung.txt
 │   ├── raw/                 # Dữ liệu cào về
 │   ├── processed/           # Dữ liệu sau làm sạch nhẹ
+│   ├── labels/              # human_labels.xlsx (người gán 500 câu), ai_labels.csv (AI gán toàn bộ), ai_label1.xlsx
 │   ├── splits/              # 3 tập train, validation, test
 │   └── tien_xu_ly/          # Dữ liệu sau tiền xử lý sâu
 │
@@ -58,6 +59,7 @@ code_tay/
 │   └── ml.ipynb             # Giai đoạn 5: Huấn luyện mô hình (TODO)
 │
 ├── models/                  # Lưu trữ vectorizer và mô hình học máy
+├── prompt_ai_label1.md      # Prompt gán nhãn AI (luật rút từ 500 câu người gán)
 ├── requirements.txt         # Thư viện phụ thuộc
 └── README.md                # Hướng dẫn dự án
 ```
