@@ -1,6 +1,6 @@
 # Kho từ dừng tiếng Việt của Van-Duyet Le (giấy phép MIT), bản vietnamese-stopwords-dash.txt:
-# https://github.com/stopwords/vietnamese-stopwords . Từ ghép nối bằng "_". Không sửa tệp này;
-# muốn giữ lại từ nào thì thêm vào giu_lai.txt.
+# https://github.com/stopwords/vietnamese-stopwords . Từ ghép nối bằng "_".
+# Từ dừng nào mang cảm xúc sẽ được giữ lại tự động trong notebook (phân tích độ lệch lớp trên train).
 a_lô
 a_ha
 ai

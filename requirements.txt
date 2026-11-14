@@ -2,7 +2,6 @@
 numpy==2.5.4
 pandas==3.0.6
 scipy==1.18.1
-openpyxl==3.1.5          # đọc/ghi file Excel (mẫu gán nhãn)
 
 # ---------- NLP và học máy ----------
 underthesea==9.5.0       # tách từ tiếng Việt
@@ -13,9 +12,8 @@ joblib==1.6.0            # lưu / nạp mô hình
 matplotlib==3.11.2
 
 # ---------- Cào dữ liệu (B1) ----------
-playwright==1.64.0
+requests==2.34.2
 beautifulsoup4==4.15.0
 
-# ---------- Công cụ phát triển ----------
+# ---------- Notebook ----------
 ipykernel                # để notebook chạy được bằng venv
-pytest                   # kiểm thử

@@ -1,26 +1,10 @@
-# Môi trường ảo Python
 venv/
 .venv/
-env/
 __pycache__/
 *.pyc
-
-# IDE & Editor
 .vscode/
 .idea/
-*.ipynb_checkpoints
-
-# Dữ liệu sinh ra khi chạy (chỉ giữ thư mục, không push tệp dữ liệu nặng)
-data/raw/*.csv
-data/processed/*.csv
-data/splits/*.csv
-data/tien_xu_ly/*.csv
-!data/product_ids.csv
-!data/resources/**
-
-# Mô hình lưu trữ
-models/*.pkl
-
-# Kết quả tạm
-results/
+.ipynb_checkpoints/
+tay.ipynb
+nlp1_project.zip
 
