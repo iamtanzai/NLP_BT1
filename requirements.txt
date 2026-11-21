@@ -1,11 +1,15 @@
+# Môi trường: Python 3.11 (gensim chưa có bản dựng sẵn cho 3.14)
+
 # ---------- Xử lý dữ liệu ----------
-numpy==2.5.4
-pandas==3.0.6
-scipy==1.18.1
+numpy==2.4.6
+pandas==3.1.1
+scipy==1.17.1
+openpyxl==3.1.5          # pandas đọc file .xlsx (04.human_labels, ai_label1)
 
 # ---------- NLP và học máy ----------
 underthesea==9.5.0       # tách từ tiếng Việt
 scikit-learn==1.9.1      # BoW, TF-IDF, Naive Bayes, SVM, độ đo
+gensim==4.4.0            # Word2Vec
 joblib==1.6.0            # lưu / nạp mô hình
 
 # ---------- Vẽ biểu đồ ----------
